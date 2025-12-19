@@ -30,16 +30,16 @@ const MiniCalendar = ({ events }) => {
 
   return (
     <div className="w-full">
-      <h2 className="text-2xl font-bold mb-6 text-center text-gradient">
+      <h2 className="text-3xl font-bold mb-8 text-center text-gradient">
         Calendar View
       </h2>
-      <div className="flex justify-center">
+      <div className="flex justify-center mb-6">
         <div className="react-calendar-wrapper">
           <Calendar
             onClickDay={(value) => setSelectedDate(value)}
             tileContent={tileContent}
             className={cn(
-              "bg-card border border-border rounded-lg p-4 shadow-sm",
+              "bg-card border border-border/50 rounded-2xl p-6 cozy-shadow",
               "react-calendar"
             )}
           />
@@ -47,27 +47,27 @@ const MiniCalendar = ({ events }) => {
       </div>
 
       {selectedDate && (
-        <div className="mt-6 p-4 bg-card border border-border rounded-lg">
-          <h3 className="text-lg font-semibold mb-3 text-foreground">
+        <div className="mt-8 p-6 bg-card border border-border/50 rounded-2xl cozy-shadow">
+          <h3 className="text-xl font-semibold mb-4 text-foreground">
             {t("events")} - {selectedDate.toDateString()}
           </h3>
           {eventsOnDate(selectedDate).length > 0 ? (
-            <ul className="space-y-2">
+            <ul className="space-y-3">
               {eventsOnDate(selectedDate).map((event, idx) => (
                 <li
                   key={idx}
-                  className="p-3 bg-muted/50 rounded-lg border border-border"
+                  className="p-4 bg-muted/50 rounded-xl border border-border/50 cozy-shadow hover:cozy-shadow transition-all duration-300"
                 >
-                  <strong className="text-primary font-semibold">
+                  <strong className="text-primary font-semibold text-lg">
                     {event.title}
                   </strong>
                   {event.description && (
-                    <span className="text-muted-foreground block mt-1">
+                    <span className="text-muted-foreground block mt-2">
                       {event.description}
                     </span>
                   )}
                   {!event.description && (
-                    <span className="text-muted-foreground italic block mt-1">
+                    <span className="text-muted-foreground italic block mt-2">
                       {t("noDescription")}
                     </span>
                   )}
@@ -75,7 +75,7 @@ const MiniCalendar = ({ events }) => {
               ))}
             </ul>
           ) : (
-            <p className="text-muted-foreground italic">
+            <p className="text-muted-foreground italic text-lg">
               No events scheduled for this date.
             </p>
           )}

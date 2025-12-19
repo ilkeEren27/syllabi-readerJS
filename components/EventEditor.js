@@ -41,32 +41,32 @@ const EventEditor = ({ events, onUpdate, onDownload }) => {
 
   return (
     <div className="w-full">
-      <h2 className="text-2xl font-bold mb-6 text-center text-gradient">
+      <h2 className="text-3xl font-bold mb-8 text-center text-gradient">
         {t("title")}
       </h2>
-      <div className="space-y-4">
+      <div className="space-y-5">
         {editedEvents.map((event, index) => (
           <div
             key={index}
-            className="bg-card border border-border rounded-lg p-4 shadow-sm hover:shadow-md transition-shadow duration-200 space-y-3 relative group"
+            className="bg-card border border-border/50 rounded-2xl p-6 cozy-shadow hover:cozy-shadow-lg transition-all duration-300 space-y-4 relative group"
           >
             <Input
               type="text"
-              className="w-full"
+              className="w-full rounded-xl"
               value={event.title}
               onChange={(e) => handleChange(index, "title", e.target.value)}
               placeholder="Event Title"
             />
             <Input
               type="date"
-              className="w-full"
+              className="w-full rounded-xl"
               value={event.date}
               onChange={(e) => handleChange(index, "date", e.target.value)}
               placeholder="YYYY-MM-DD"
             />
             <Input
               type="text"
-              className="w-full"
+              className="w-full rounded-xl"
               value={event.description || ""}
               onChange={(e) =>
                 handleChange(index, "description", e.target.value)
@@ -78,8 +78,8 @@ const EventEditor = ({ events, onUpdate, onDownload }) => {
               variant="ghost"
               size="icon"
               className={cn(
-                "absolute top-2 right-2 text-destructive hover:text-destructive hover:bg-destructive/10",
-                "opacity-0 group-hover:opacity-100 transition-opacity"
+                "absolute top-4 right-4 text-destructive hover:text-destructive hover:bg-destructive/10 rounded-xl",
+                "opacity-0 group-hover:opacity-100 transition-all duration-300"
               )}
               title={t("delete")}
             >
@@ -89,21 +89,21 @@ const EventEditor = ({ events, onUpdate, onDownload }) => {
         ))}
       </div>
 
-      <div className="flex justify-between gap-4 mt-6 flex-wrap">
+      <div className="flex justify-between gap-5 mt-8 flex-wrap">
         <Button
           onClick={handleAdd}
           variant="secondary"
-          className="flex-1 min-w-[140px]"
+          className="flex-1 min-w-[160px] h-12 rounded-2xl transition-all duration-300 hover:scale-105"
         >
-          <Plus className="h-4 w-4 mr-2" />
+          <Plus className="h-5 w-5 mr-2" />
           {t("addNew")}
         </Button>
 
         <Button
           onClick={() => onDownload(editedEvents)}
-          className="flex-1 min-w-[140px] gradient-primary hover:opacity-90"
+          className="flex-1 min-w-[160px] h-12 gradient-primary hover:opacity-90 rounded-2xl transition-all duration-300 hover:scale-105 cozy-shadow-lg"
         >
-          <Download className="h-4 w-4 mr-2" />
+          <Download className="h-5 w-5 mr-2" />
           {t("download")}
         </Button>
       </div>

@@ -72,28 +72,28 @@ const UploadSyllabi = ({ onEventsExtracted }) => {
   };
 
   return (
-    <div className="flex flex-col items-center gap-4 w-full">
-      <div className="text-center mb-4">
-        <h3 className="text-2xl font-bold mb-2 text-gradient">
+    <div className="flex flex-col items-center gap-6 w-full">
+      <div className="text-center mb-2">
+        <h3 className="text-3xl font-bold mb-3 text-gradient">
           {t("button")}
         </h3>
-        <p className="text-sm text-muted-foreground">
+        <p className="text-base text-muted-foreground">
           Upload PDF or DOCX files to extract calendar events
         </p>
       </div>
       <Button
         onClick={() => fileInputRef.current.click()}
         disabled={isLoading}
-        className="h-12 px-8 text-base font-semibold gradient-primary hover:opacity-90 transition-all duration-300 shadow-lg hover:shadow-xl transform hover:scale-105 disabled:opacity-50 disabled:cursor-not-allowed disabled:transform-none"
+        className="h-14 px-10 text-lg font-semibold gradient-primary hover:opacity-90 transition-all duration-500 cozy-shadow-lg hover:cozy-shadow-lg transform hover:scale-105 disabled:opacity-50 disabled:cursor-not-allowed disabled:transform-none rounded-2xl"
         size="lg"
       >
         {isLoading ? (
-          <span className="flex items-center gap-2">
+          <span className="flex items-center gap-3">
             <span className="animate-spin">⏳</span>
             {t("extracting")}
           </span>
         ) : (
-          <span className="flex items-center gap-2">
+          <span className="flex items-center gap-3">
             📄 {t("button")}
           </span>
         )}
@@ -107,8 +107,8 @@ const UploadSyllabi = ({ onEventsExtracted }) => {
         multiple
       />
       {errorMessage && (
-        <div className="mt-4 p-4 bg-destructive/10 border border-destructive/20 rounded-lg">
-          <p className="text-destructive text-sm font-medium text-center">
+        <div className="mt-6 p-5 bg-destructive/10 border border-destructive/20 rounded-2xl">
+          <p className="text-destructive text-base font-medium text-center">
             {errorMessage}
           </p>
         </div>

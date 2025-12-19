@@ -34,55 +34,55 @@ export default function HomePage() {
 
   return (
     <main className="flex flex-col min-h-screen">
-      <header className="flex items-center justify-between px-6 py-4 border-b border-border bg-card/50 backdrop-blur-sm sticky top-0 z-50 transition-colors">
+      <header className="flex items-center justify-between px-8 py-6 border-b border-border/50 bg-background sticky top-0 z-50 transition-all duration-500">
         <h1 className="text-2xl font-bold min-h-[2.5rem] flex items-center">
-          <Link href="/" className="whitespace-nowrap text-gradient font-extrabold hover:opacity-80 transition-opacity">
+          <Link href="/" className="whitespace-nowrap text-gradient font-extrabold hover:opacity-80 transition-opacity duration-300">
             Syllabi-Reader
           </Link>
         </h1>
-        <div className="flex items-center gap-3">
+        <div className="flex items-center gap-4">
           <ThemeToggle />
           <LanguageSwitch className="w-28" />
         </div>
       </header>
-      <section className="flex-grow px-6 py-8 max-w-7xl mx-auto w-full">
-        <div className="mb-8">
-          <div className="bg-card border border-border rounded-2xl p-8 shadow-lg">
+      <section className="flex-grow px-8 py-12 max-w-7xl mx-auto w-full">
+        <div className="mb-10">
+          <div className="bg-card border border-border/50 rounded-3xl p-10 cozy-shadow-lg">
             <UploadSyllabi onEventsExtracted={setEvents} />
           </div>
         </div>
 
         {events.length > 0 && (
-          <div className="space-y-8">
-            <div className="bg-card border border-border rounded-2xl p-6 lg:p-8 shadow-lg">
+          <div className="space-y-10">
+            <div className="bg-card border border-border/50 rounded-3xl p-8 lg:p-10 cozy-shadow-lg">
               <EventEditor
                 events={events}
                 onUpdate={setEvents}
                 onDownload={handleDownloadICS}
               />
             </div>
-            <div className="bg-card border border-border rounded-2xl p-6 lg:p-8 shadow-lg">
+            <div className="bg-card border border-border/50 rounded-3xl p-8 lg:p-10 cozy-shadow-lg">
               <MiniCalendar events={events} />
             </div>
           </div>
         )}
       </section>
-      <footer className="mt-auto py-8 border-t border-border bg-card/50">
-        <div className="flex flex-col items-center gap-6 px-6">
+      <footer className="mt-auto py-10 border-t border-border/50 bg-card/60">
+        <div className="flex flex-col items-center gap-8 px-8">
           <Button
             asChild
             variant="outline"
-            className="h-12 w-60 text-lg font-semibold"
+            className="h-14 w-64 text-lg font-semibold rounded-2xl transition-all duration-300 hover:scale-105"
           >
             <Link href="/">{t("return")}</Link>
           </Button>
-          <div className="flex justify-center items-center gap-2 text-base lg:text-lg flex-wrap">
+          <div className="flex justify-center items-center gap-3 text-base lg:text-lg flex-wrap">
             <span className="text-muted-foreground">{t("footer")}</span>
             <Link
               href="https://ilkeeren.dev"
               target="_blank"
               rel="noopener noreferrer"
-              className="text-primary hover:text-secondary font-medium transition-colors hover:underline"
+              className="text-primary hover:text-accent font-medium transition-colors duration-300 hover:underline"
             >
               Eren
             </Link>
@@ -91,7 +91,7 @@ export default function HomePage() {
               href="https://www.linkedin.com/in/hassan-syed/"
               target="_blank"
               rel="noopener noreferrer"
-              className="text-primary hover:text-secondary font-medium transition-colors hover:underline"
+              className="text-primary hover:text-accent font-medium transition-colors duration-300 hover:underline"
             >
               Hassan
             </Link>
