@@ -8,6 +8,7 @@ import UploadSyllabi from "@/components/UploadSyllabi";
 import EventEditor from "@/components/EventEditor";
 import MiniCalendar from "@/components/MiniCalendar";
 import LanguageSwitch from "@/components/LanguageSwitch";
+import ThemeToggle from "@/components/ThemeToggle";
 
 export default function HomePage() {
   const t = useTranslations("UploadPage");
@@ -33,51 +34,68 @@ export default function HomePage() {
 
   return (
     <main className="flex flex-col min-h-screen">
-      <header className="flex items-center justify-between px-6 py-4">
+      <header className="flex items-center justify-between px-6 py-4 border-b border-border bg-card/50 backdrop-blur-sm sticky top-0 z-50 transition-colors">
         <h1 className="text-2xl font-bold min-h-[2.5rem] flex items-center">
-          <Link href="/" className="whitespace-nowrap">
+          <Link href="/" className="whitespace-nowrap text-gradient font-extrabold hover:opacity-80 transition-opacity">
             Syllabi-Reader
           </Link>
         </h1>
-        <LanguageSwitch className="w-28" />
+        <div className="flex items-center gap-3">
+          <ThemeToggle />
+          <LanguageSwitch className="w-28" />
+        </div>
       </header>
-      <section className="flex-grow">
-        <UploadSyllabi onEventsExtracted={setEvents} />
+      <section className="flex-grow px-6 py-8 max-w-7xl mx-auto w-full">
+        <div className="mb-8">
+          <div className="bg-card border border-border rounded-2xl p-8 shadow-lg">
+            <UploadSyllabi onEventsExtracted={setEvents} />
+          </div>
+        </div>
 
         {events.length > 0 && (
-          <EventEditor
-            events={events}
-            onUpdate={setEvents}
-            onDownload={handleDownloadICS}
-          />
+          <div className="space-y-8">
+            <div className="bg-card border border-border rounded-2xl p-6 lg:p-8 shadow-lg">
+              <EventEditor
+                events={events}
+                onUpdate={setEvents}
+                onDownload={handleDownloadICS}
+              />
+            </div>
+            <div className="bg-card border border-border rounded-2xl p-6 lg:p-8 shadow-lg">
+              <MiniCalendar events={events} />
+            </div>
+          </div>
         )}
-        {events.length > 0 && <MiniCalendar events={events} />}
       </section>
-      <footer>
-        <div className="flex justify-center text-2xl mt-auto mb-10">
-          <Button className="flex justify-self-center my-10 h-12 w-60 text-xl">
+      <footer className="mt-auto py-8 border-t border-border bg-card/50">
+        <div className="flex flex-col items-center gap-6 px-6">
+          <Button
+            asChild
+            variant="outline"
+            className="h-12 w-60 text-lg font-semibold"
+          >
             <Link href="/">{t("return")}</Link>
           </Button>
-        </div>
-        <div className="flex justify-center text-2xl mt-auto mb-10">
-          {t("footer")}{" "}
-          <Link
-            href="https://ilkeeren.dev"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="text-blue-500 hover:underline ml-1"
-          >
-            Eren
-          </Link>
-          {" & "}
-          <Link
-            href="https://www.linkedin.com/in/hassan-syed/"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="text-blue-500 hover:underline ml-1"
-          >
-            Hassan
-          </Link>
+          <div className="flex justify-center items-center gap-2 text-base lg:text-lg flex-wrap">
+            <span className="text-muted-foreground">{t("footer")}</span>
+            <Link
+              href="https://ilkeeren.dev"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-primary hover:text-secondary font-medium transition-colors hover:underline"
+            >
+              Eren
+            </Link>
+            <span className="text-muted-foreground">&</span>
+            <Link
+              href="https://www.linkedin.com/in/hassan-syed/"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-primary hover:text-secondary font-medium transition-colors hover:underline"
+            >
+              Hassan
+            </Link>
+          </div>
         </div>
       </footer>
     </main>

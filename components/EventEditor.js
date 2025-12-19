@@ -1,6 +1,10 @@
 "use client";
 import { useTranslations } from "next-intl";
 import { useState, useEffect } from "react";
+import { Input } from "@/components/ui/input";
+import { Button } from "@/components/ui/button";
+import { Trash2, Plus, Download } from "lucide-react";
+import { cn } from "@/lib/utils";
 
 const EventEditor = ({ events, onUpdate, onDownload }) => {
   const t = useTranslations("EventEditor");
@@ -36,62 +40,72 @@ const EventEditor = ({ events, onUpdate, onDownload }) => {
   };
 
   return (
-    <div className="mt-6 w-full max-w-2xl mx-auto">
-      <h2 className="text-xl font-semibold mb-4 text-center">{t("title")}</h2>
+    <div className="w-full">
+      <h2 className="text-2xl font-bold mb-6 text-center text-gradient">
+        {t("title")}
+      </h2>
       <div className="space-y-4">
         {editedEvents.map((event, index) => (
           <div
             key={index}
-            className="bg-white rounded p-4 shadow space-y-2 relative"
+            className="bg-card border border-border rounded-lg p-4 shadow-sm hover:shadow-md transition-shadow duration-200 space-y-3 relative group"
           >
-            <input
+            <Input
               type="text"
-              className="w-full p-2 border rounded"
+              className="w-full"
               value={event.title}
               onChange={(e) => handleChange(index, "title", e.target.value)}
               placeholder="Event Title"
             />
-            <input
+            <Input
               type="date"
-              className="w-full p-2 border rounded"
+              className="w-full"
               value={event.date}
               onChange={(e) => handleChange(index, "date", e.target.value)}
               placeholder="YYYY-MM-DD"
             />
-            <input
+            <Input
               type="text"
-              className="w-full p-2 border rounded"
+              className="w-full"
               value={event.description || ""}
               onChange={(e) =>
                 handleChange(index, "description", e.target.value)
               }
               placeholder={t("description")}
             />
-            <button
+            <Button
               onClick={() => handleDelete(index)}
-              className="absolute top-2 right-2 text-red-500 hover:text-red-700 text-sm"
+              variant="ghost"
+              size="icon"
+              className={cn(
+                "absolute top-2 right-2 text-destructive hover:text-destructive hover:bg-destructive/10",
+                "opacity-0 group-hover:opacity-100 transition-opacity"
+              )}
               title={t("delete")}
             >
-              🗑
-            </button>
+              <Trash2 className="h-4 w-4" />
+            </Button>
           </div>
         ))}
       </div>
 
-      <div className="flex justify-between mt-6">
-        <button
+      <div className="flex justify-between gap-4 mt-6 flex-wrap">
+        <Button
           onClick={handleAdd}
-          className="bg-green-600 hover:bg-green-800 text-white font-bold py-2 px-4 rounded"
+          variant="secondary"
+          className="flex-1 min-w-[140px]"
         >
+          <Plus className="h-4 w-4 mr-2" />
           {t("addNew")}
-        </button>
+        </Button>
 
-        <button
+        <Button
           onClick={() => onDownload(editedEvents)}
-          className="bg-purple-600 hover:bg-purple-800 text-white font-bold py-2 px-4 rounded"
+          className="flex-1 min-w-[140px] gradient-primary hover:opacity-90"
         >
+          <Download className="h-4 w-4 mr-2" />
           {t("download")}
-        </button>
+        </Button>
       </div>
     </div>
   );

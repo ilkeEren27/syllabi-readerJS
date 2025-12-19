@@ -46,74 +46,74 @@
 }
 
 :root {
-  --background: #f5f1ed; /* Light beige */
-  --foreground: #252323; /* Dark charcoal */
-  --card: #ffffff; /* White */
-  --card-foreground: #252323; /* Dark charcoal */
-  --popover: #ffffff; /* White */
-  --popover-foreground: #252323; /* Dark charcoal */
-  --primary: #bf4342; /* Muted red */
+  --background: #f8fafc; /* Clean light blue-gray */
+  --foreground: #0f172a; /* Deep slate */
+  --card: #ffffff; /* Pure white */
+  --card-foreground: #0f172a; /* Deep slate */
+  --popover: #ffffff; /* Pure white */
+  --popover-foreground: #0f172a; /* Deep slate */
+  --primary: #6366f1; /* Vibrant indigo */
   --primary-foreground: #ffffff; /* White */
-  --secondary: #70798c; /* Cool gray-blue */
+  --secondary: #8b5cf6; /* Purple */
   --secondary-foreground: #ffffff; /* White */
-  --muted: #dad2bc; /* Soft beige */
-  --muted-foreground: #70798c; /* Cool gray-blue */
-  --accent: #bf4342; /* Muted red */
-  --accent-foreground: #252323; /* Dark charcoal */
-  --destructive: #bf4342; /* Muted red */
+  --muted: #e2e8f0; /* Light blue-gray */
+  --muted-foreground: #64748b; /* Slate gray */
+  --accent: #3b82f6; /* Bright blue */
+  --accent-foreground: #ffffff; /* White */
+  --destructive: #ef4444; /* Red */
   --destructive-foreground: #ffffff; /* White */
-  --border: #70798c; /* Cool gray-blue */
-  --input: #f5f1ed; /* Light beige */
-  --ring: #70798c; /* Cool gray-blue */
-  --chart-1: #252323; /* Dark charcoal */
-  --chart-2: #70798c; /* Cool gray-blue */
-  --chart-3: #f5f1ed; /* Light beige */
-  --chart-4: #dad2bc; /* Soft beige */
-  --chart-5: #bf4342; /* Muted red */
+  --border: #cbd5e1; /* Light border */
+  --input: #f1f5f9; /* Very light blue-gray */
+  --ring: #6366f1; /* Indigo ring */
+  --chart-1: #6366f1; /* Indigo */
+  --chart-2: #8b5cf6; /* Purple */
+  --chart-3: #3b82f6; /* Blue */
+  --chart-4: #06b6d4; /* Cyan */
+  --chart-5: #10b981; /* Green */
   --radius: 0.625rem;
-  --sidebar: #252323; /* Dark charcoal */
-  --sidebar-foreground: #f5f1ed; /* Light beige */
-  --sidebar-primary: #70798c; /* Cool gray-blue */
+  --sidebar: #ffffff; /* White */
+  --sidebar-foreground: #0f172a; /* Deep slate */
+  --sidebar-primary: #6366f1; /* Indigo */
   --sidebar-primary-foreground: #ffffff; /* White */
-  --sidebar-accent: #bf4342; /* Muted red */
-  --sidebar-accent-foreground: #252323; /* Dark charcoal */
-  --sidebar-border: #70798c; /* Cool gray-blue */
-  --sidebar-ring: #70798c; /* Cool gray-blue */
+  --sidebar-accent: #8b5cf6; /* Purple */
+  --sidebar-accent-foreground: #ffffff; /* White */
+  --sidebar-border: #e2e8f0; /* Light border */
+  --sidebar-ring: #6366f1; /* Indigo */
 }
 
 .dark {
-  --background: #252323; /* Dark charcoal */
-  --foreground: #f5f1ed; /* Light beige */
-  --card: #252323; /* Dark charcoal */
-  --card-foreground: #f5f1ed; /* Light beige */
-  --popover: #252323; /* Dark charcoal */
-  --popover-foreground: #f5f1ed; /* Light beige */
-  --primary: #bf4342; /* Muted red */
-  --primary-foreground: #ffffff; /* White */
-  --secondary: #70798c; /* Cool gray-blue */
-  --secondary-foreground: #ffffff; /* White */
-  --muted: #70798c; /* Cool gray-blue */
-  --muted-foreground: #f5f1ed; /* Light beige */
-  --accent: #bf4342; /* Muted red */
-  --accent-foreground: #252323; /* Dark charcoal */
-  --destructive: #bf4342; /* Muted red */
-  --destructive-foreground: #ffffff; /* White */
-  --border: #70798c; /* Cool gray-blue */
-  --input: #252323; /* Dark charcoal */
-  --ring: #70798c; /* Cool gray-blue */
-  --chart-1: #f5f1ed; /* Light beige */
-  --chart-2: #70798c; /* Cool gray-blue */
-  --chart-3: #252323; /* Dark charcoal */
-  --chart-4: #dad2bc; /* Soft beige */
-  --chart-5: #bf4342; /* Muted red */
-  --sidebar: #252323; /* Dark charcoal */
-  --sidebar-foreground: #f5f1ed; /* Light beige */
-  --sidebar-primary: #70798c; /* Cool gray-blue */
-  --sidebar-primary-foreground: #ffffff; /* White */
-  --sidebar-accent: #bf4342; /* Muted red */
-  --sidebar-accent-foreground: #252323; /* Dark charcoal */
-  --sidebar-border: #70798c; /* Cool gray-blue */
-  --sidebar-ring: #70798c; /* Cool gray-blue */
+  --background: #0f172a; /* Deep slate */
+  --foreground: #f1f5f9; /* Light blue-gray */
+  --card: #1e293b; /* Dark slate */
+  --card-foreground: #f1f5f9; /* Light blue-gray */
+  --popover: #1e293b; /* Dark slate */
+  --popover-foreground: #f1f5f9; /* Light blue-gray */
+  --primary: #818cf8; /* Lighter indigo for dark mode */
+  --primary-foreground: #0f172a; /* Deep slate */
+  --secondary: #a78bfa; /* Lighter purple */
+  --secondary-foreground: #0f172a; /* Deep slate */
+  --muted: #334155; /* Medium slate */
+  --muted-foreground: #94a3b8; /* Light slate */
+  --accent: #60a5fa; /* Bright blue */
+  --accent-foreground: #0f172a; /* Deep slate */
+  --destructive: #f87171; /* Lighter red */
+  --destructive-foreground: #0f172a; /* Deep slate */
+  --border: #334155; /* Medium slate */
+  --input: #1e293b; /* Dark slate */
+  --ring: #818cf8; /* Lighter indigo */
+  --chart-1: #818cf8; /* Lighter indigo */
+  --chart-2: #a78bfa; /* Lighter purple */
+  --chart-3: #60a5fa; /* Bright blue */
+  --chart-4: #22d3ee; /* Cyan */
+  --chart-5: #34d399; /* Green */
+  --sidebar: #1e293b; /* Dark slate */
+  --sidebar-foreground: #f1f5f9; /* Light blue-gray */
+  --sidebar-primary: #818cf8; /* Lighter indigo */
+  --sidebar-primary-foreground: #0f172a; /* Deep slate */
+  --sidebar-accent: #a78bfa; /* Lighter purple */
+  --sidebar-accent-foreground: #0f172a; /* Deep slate */
+  --sidebar-border: #334155; /* Medium slate */
+  --sidebar-ring: #818cf8; /* Lighter indigo */
 }
 
 @layer base {
@@ -123,7 +123,143 @@
     margin: 0;
     @apply border-border outline-ring/50;
   }
-  body {
-    @apply bg-background text-foreground;
+  html {
+    scroll-behavior: smooth;
   }
+  body {
+    @apply bg-background text-foreground transition-colors duration-300;
+  }
+}
+
+@layer utilities {
+  .gradient-primary {
+    background: linear-gradient(135deg, #6366f1 0%, #8b5cf6 100%);
+  }
+  .gradient-secondary {
+    background: linear-gradient(135deg, #3b82f6 0%, #6366f1 100%);
+  }
+  .gradient-accent {
+    background: linear-gradient(135deg, #8b5cf6 0%, #ec4899 100%);
+  }
+  .text-gradient {
+    background: linear-gradient(135deg, #6366f1 0%, #8b5cf6 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+  }
+  .glass-effect {
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+  }
+  .dark .glass-effect {
+    background: rgba(30, 41, 59, 0.5);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+  }
+}
+
+/* React Calendar Theme Styles */
+.react-calendar {
+  width: 100%;
+  max-width: 100%;
+  background: transparent;
+  font-family: inherit;
+}
+
+.react-calendar__navigation {
+  display: flex;
+  height: 44px;
+  margin-bottom: 1em;
+}
+
+.react-calendar__navigation button {
+  min-width: 44px;
+  background: none;
+  font-size: 16px;
+  margin-top: 8px;
+  color: hsl(var(--foreground));
+  transition: all 0.2s;
+}
+
+.react-calendar__navigation button:enabled:hover,
+.react-calendar__navigation button:enabled:focus {
+  background-color: hsl(var(--muted));
+  border-radius: 8px;
+}
+
+.react-calendar__navigation button[disabled] {
+  background-color: transparent;
+  color: hsl(var(--muted-foreground));
+}
+
+.react-calendar__month-view__weekdays {
+  text-align: center;
+  text-transform: uppercase;
+  font-weight: bold;
+  font-size: 0.75em;
+  color: hsl(var(--muted-foreground));
+}
+
+.react-calendar__month-view__weekdays__weekday {
+  padding: 0.5em;
+}
+
+.react-calendar__month-view__days__day--weekend {
+  color: hsl(var(--destructive));
+}
+
+.react-calendar__month-view__days__day--neighboringMonth {
+  color: hsl(var(--muted-foreground));
+  opacity: 0.5;
+}
+
+.react-calendar__tile {
+  max-width: 100%;
+  padding: 10px 6.6667px;
+  background: none;
+  text-align: center;
+  line-height: 16px;
+  font-size: 0.833em;
+  color: hsl(var(--foreground));
+  border-radius: 8px;
+  transition: all 0.2s;
+}
+
+.react-calendar__tile:enabled:hover,
+.react-calendar__tile:enabled:focus {
+  background-color: hsl(var(--muted));
+}
+
+.react-calendar__tile--now {
+  background: hsl(var(--accent) / 0.2);
+  font-weight: bold;
+}
+
+.react-calendar__tile--now:enabled:hover,
+.react-calendar__tile--now:enabled:focus {
+  background: hsl(var(--accent) / 0.3);
+}
+
+.react-calendar__tile--hasActive {
+  background: hsl(var(--primary));
+  color: hsl(var(--primary-foreground));
+}
+
+.react-calendar__tile--hasActive:enabled:hover,
+.react-calendar__tile--hasActive:enabled:focus {
+  background: hsl(var(--primary) / 0.9);
+}
+
+.react-calendar__tile--active {
+  background: hsl(var(--primary));
+  color: hsl(var(--primary-foreground));
+}
+
+.react-calendar__tile--active:enabled:hover,
+.react-calendar__tile--active:enabled:focus {
+  background: hsl(var(--primary) / 0.9);
+}
+
+.react-calendar--selectRange .react-calendar__tile--hover {
+  background-color: hsl(var(--muted));
 }
