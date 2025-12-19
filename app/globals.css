@@ -276,3 +276,24 @@
 .react-calendar--selectRange .react-calendar__tile--hover {
   background-color: hsl(var(--muted));
 }
+
+/* Dropdown animations */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes slideDown {
+  from {
+    transform: translateY(-8px);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
